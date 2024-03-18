@@ -17,16 +17,16 @@ export default function Home(){
         getData().then((data) =>{
             setTVs(data)
         });
-    }, [tvs])
+    }, [])
 
     let showTVs = () =>{
         let html = []
         tvs?.genres.forEach(element => {
             html.push(
-                    <p key={element.id}>
+                    <div key={element.id} className='tvs'>
                         <p> <label>ID:</label> {element.id}</p>
                         <p> <label>Name:</label> {element.name}</p>
-                    </p>
+                    </div>
                     )
         });
         return html
