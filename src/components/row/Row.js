@@ -18,12 +18,18 @@ export default function Row (props){
     },[])
 
     return(
-        <div>
-            {props.title}
-            <div className='images'>
+        <div className='row-container'>
+            <h2 className='row-header'>{props.title}</h2>
+            <div className='row-cards'> 
                 {filmes?.map((filme) => {
-                    let width = props.isLarge? 'large':'normal'
-                    return <img className={width} key={filme?.id} src={image_host + filme.backdrop_path}></img> 
+                    return(
+                        <img 
+                            className={`movie-card ${props.isLarge && "movie-card-large"}` } 
+                            key={filme?.id} 
+                            src={image_host + (props.isLarge?filme.backdrop_path:filme.poster_path)}
+                            alt={filme.name}>
+                        </img> 
+                    )
                 })}
             </div>
         </div>
