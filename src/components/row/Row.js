@@ -1,21 +1,24 @@
 import { useEffect, useState } from 'react';
-import { getData } from '../api'
+import { getData } from '../../api'
 import './Row.css';
 
 export default function Row (props){
     const [filmes, setFilmes] = useState()
     let image_host = 'https://image.tmdb.org/t/p/original/'
 
-    let fetchData = async () => {
-        let response = await getData(props.path)
-        return response
-    }
+    // let fetchData = async () => {
+    //     let response = await getData(props.path)
+    //     return response
+    // }
 
     useEffect( () => {
-        fetchData().then((data)=>{
-            setFilmes(data?.results)
-        })
-    },[])
+        async function fetchData()  {
+            let response = await getData(props.path)
+            setFilmes(response?.results)
+        }
+        fetchData();
+        console.log("AAAAAA")
+    },[props.path])
 
     return(
         <div className='row-container'>
