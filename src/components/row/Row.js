@@ -6,18 +6,12 @@ export default function Row (props){
     const [filmes, setFilmes] = useState()
     let image_host = 'https://image.tmdb.org/t/p/original/'
 
-    // let fetchData = async () => {
-    //     let response = await getData(props.path)
-    //     return response
-    // }
-
     useEffect( () => {
         async function fetchData()  {
             let response = await getData(props.path)
-            setFilmes(response?.results)
+            setFilmes(response)
         }
         fetchData();
-        console.log("AAAAAA")
     },[props.path])
 
     return(

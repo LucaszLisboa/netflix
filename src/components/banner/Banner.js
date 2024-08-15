@@ -10,7 +10,7 @@ export default function Banner(){
     try{
       const netflixOriginalsCategory = categories.find( category => category.name === "netflixOriginals")
       const data = await getData(netflixOriginalsCategory.path)
-      const movies = data.results
+      const movies = data
       const randomIndex = Math.floor(Math.random() * movies.length)
       setMovie(movies[randomIndex])
     }catch(error){

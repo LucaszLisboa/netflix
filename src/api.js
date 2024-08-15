@@ -5,44 +5,44 @@ export const categories = [
     {
         name: "trending",
         title: "Em Alta",
-        path: "/trending/all/week?api_key="+API_KEY+"&language=pt-BR",
+        path: "http://localhost:3001/emAlta",
         isLarge: true,
     },
     {
         name: "netflixOriginals",
         title: "Originais Netflix",
-        path: "/discover/tv?api_key="+API_KEY+"&with_networks=213",
+        path: "http://localhost:3001/originaisNetflix",
         isLarge: false,
     },
     {
         name: "topRated",
         title: "Populares",
-        path: "/movie/top_rated?api_key="+API_KEY+"&language=pt-BR",
+        path: "http://localhost:3001/populares",
         isLarge: false,
     },
     {
         name: "comedy",
         title: "Comédias",
-        path: "/discover/tv?api_key="+API_KEY+"&with_genres=35",
+        path: "http://localhost:3001/comedias",
         isLarge: false,
     },  
     {
         name: "romances",
         title: "Romances",
-        path: "/discover/tv?api_key="+API_KEY+"&with_genres=10749",
+        path: "http://localhost:3001/romances",
         isLarge: false,
     },                
     {
         name: "documentaries",
         title: "Documentários",
-        path: "/discover/tv?api_key="+API_KEY+"&with_genres=99",
+        path: "http://localhost:3001/documentarios",
         isLarge: false,
     }
 ]
 
 export const getData = async (path) => {
     try{
-        let URI = DNS + path
+        let URI = path
         let response = await fetch(URI)
         return response.json()
     } catch (error){
