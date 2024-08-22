@@ -1,7 +1,7 @@
 import React from "react";
 import './Navbar.css';
 
-export default function Navbar(){
+export function Navbar(){
 
   const logo = "https://upload.wikimedia.org/wikipedia/commons/6/67/NewNetflixLogo.png" 
   const avatar = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"

@@ -1,24 +1,12 @@
 import './App.css';
-import { categories } from './api';
-import Row from './components/row/Row';
-import Navbar from './components/navbar/Navbar';
-import Banner from './components/banner/Banner';
-
+import { BrowserRouter } from "react-router-dom";
+import { MyRoutes } from "./routes/Routes";
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Banner/>
-      {categories.map( (category) => {
-        return <Row 
-                  key={category.name}
-                  title={category.title}
-                  isLarge={category.isLarge}
-                  path={category.path}
-                />
-      })}
-    </div>
+    <BrowserRouter>
+      <MyRoutes/>
+    </BrowserRouter>
   );
 }
 

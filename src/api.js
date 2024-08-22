@@ -1,5 +1,4 @@
-const API_KEY = '011cb5d3d6e81f18cdb89e4a3192b13e'
-const DNS = 'https://api.themoviedb.org/3'
+import axios from "axios"
 
 export const categories = [
     {
@@ -43,10 +42,13 @@ export const categories = [
 export const getData = async (path) => {
     try{
         let URI = path
-        let response = await fetch(URI)
-        return response.json()
+        let response = await axios.get(URI, {
+            headers: {
+                'token': sessionStorage.getItem('token')
+            }
+        })
+        return response.data
     } catch (error){
         console.log(error)
     }
-
 }

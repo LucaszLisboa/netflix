@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getData } from '../../api'
 import './Row.css';
 
-export default function Row (props){
+export function Row (props){
     const [filmes, setFilmes] = useState()
     let image_host = 'https://image.tmdb.org/t/p/original/'
 

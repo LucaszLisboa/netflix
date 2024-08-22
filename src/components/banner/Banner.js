@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { categories, getData } from "../../api";
 import "./Banner.css";
 
-export default function Banner(){
+export function Banner(){
   const[movie, setMovie] = useState({});
   const[firstCall, setFirstCall] = useState(true);
 
