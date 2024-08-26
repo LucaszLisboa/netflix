@@ -25,6 +25,8 @@ export function Login() {
             }).then((response) => {
                 sessionStorage.setItem('token', response?.data?.sessionID)
                 navigate('/filmes')
+            }).catch((error) => {
+                console.log(error)
             })
         } catch (error) {
             console.log(error)

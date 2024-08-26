@@ -42,16 +42,16 @@ export function Banner(){
         roundPosition: "center-center",
       }}
     >
-      <div className="banner-content">
+      <div className="ml-24 pt-72 space-y-4">
         <h1 className="banner-title">
           {movie?.title || movie?.name || movie?.original_name}
         </h1> 
 
         <div className="banner-description">
-          <h2>{truncate(movie?.overview, 150)}</h2>
+          <h2 className="text-xl font-medium">{truncate(movie?.overview, 150)}</h2>
         </div>
         
-        <div className="banner-button-container">
+        <div className="flex items-center gap-4">
           <div className="banner-button">
             Assistir
           </div>

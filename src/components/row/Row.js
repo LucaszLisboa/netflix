@@ -16,7 +16,7 @@ export function Row (props){
 
     return(
         <div className='row-container'>
-            <h2 className='row-header'>{props.title}</h2>
+            <h2 className='row-header text-2xl font-bold'>{props.title}</h2>
             <div className='row-cards'> 
                 {filmes?.map((filme) => {
                     return(

@@ -1,5 +1,4 @@
 import React from "react";
-import './Navbar.css';
 
 export function Navbar(){
 
@@ -7,7 +6,7 @@ export function Navbar(){
   const avatar = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
 
   return(
-    <div className="nav-container">
+    <div className="w-full h-20 flex justify-between fixed p-5 bg-gradient-to-b from-black to-transparent">
       <img className="nav-logo" src={logo} alt="Netflix"></img>
       <img className="nav-avatar" src={avatar} alt="Avatar"></img>
     </div>
