@@ -9,7 +9,7 @@ export function Navbar({usuario}) {
     <div className="w-full h-20 flex justify-between fixed p-5 bg-gradient-to-b from-black to-transparent">
       <img className="nav-logo" src={logo} alt="Netflix"></img>
       <div className="flex gap-4">
-        <p className="font-semibold text-2xl ">{usuario?.email}</p>
+        <p className="font-semibold text-2xl ">{usuario?.nome}</p>
         <img className="nav-avatar" src={avatar} alt="Avatar"></img>
       </div>
     </div>

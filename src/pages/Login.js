@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const logo = "https://upload.wikimedia.org/wikipedia/commons/6/67/NewNetflixLogo.png" 
+import backgroundLogin from '../images/backgroundLogin.jpg'
+import logo from '../images/logoNetflix.png'
 
 export function Login() {
     const [email, setEmail] = useState("");
@@ -34,24 +35,25 @@ export function Login() {
     }
 
     return (
-        <section className="w-full h-screen flex items-center justify-center">
-            <div className="w-1/5 flex flex-col gap-10">
+        <section className="w-full h-screen flex items-center justify-center relative">
+            <img src={backgroundLogin} className="w-screen h-screen absolute inset-0 object-cover"/>
+            <div className="w-2/6 flex flex-col gap-10 bg-black/70 px-20 pb-32 rounded-2xl absolute z-10 ">
                 <img src={logo}></img>
-                <form className="flex flex-col space-y-4 justify-center" onSubmit={logar}>
+                <form className="flex flex-col space-y-6 justify-center text-lg mt-[-40px]" onSubmit={logar}>
                     <input 
-                        className="p-2 rounded-xl text-black" 
+                        className="p-3 rounded-md text-black" 
                         type="email" 
                         placeholder="Email" 
                         value={email} 
                         onChange={onChangeEmail}/>
                     <input 
-                        className="p-2 rounded-xl text-black" 
+                        className="p-3 rounded-md text-black" 
                         type="password" 
                         placeholder="Senha" 
                         value={senha} 
                         onChange={onChangeSenha}/>
                     <button 
-                        className="p-2 rounded-xl bg-red-600 hover:bg-red-800" 
+                        className="p-3 rounded-md bg-red-600 hover:bg-red-800 font-semibold" 
                         type="submit">Entrar
                     </button>
                 </form>
