@@ -10,12 +10,12 @@ export function Filmes(){
 
   useEffect(() => {
     fetchUser();
-  })
+  },[])
 
   const fetchUser = () => {
     axios.get('http://localhost:3001/user', {
       headers: {
-        'token': sessionStorage.getItem('token')
+        'Authorization': sessionStorage.getItem('token')
       }
     }).then((response) => {
       let user = response.data

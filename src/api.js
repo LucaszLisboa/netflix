@@ -44,7 +44,7 @@ export const getData = async (path) => {
         let URI = path
         let response = await axios.get(URI, {
             headers: {
-                'token': sessionStorage.getItem('token')
+                'Authorization': sessionStorage.getItem('token')
             }
         })
         return response.data
