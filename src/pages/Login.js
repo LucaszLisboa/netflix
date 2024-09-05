@@ -37,9 +37,9 @@ export function Login() {
     return (
         <section className="w-full h-screen flex items-center justify-center relative">
             <img src={backgroundLogin} className="w-screen h-screen absolute inset-0 object-cover"/>
-            <div className="w-2/6 flex flex-col gap-10 bg-black/70 px-20 pb-32 rounded-2xl absolute z-10 ">
+            <div className="w-full max-w-md px-6 py-8 bg-black/70 pb-14 rounded-2xl absolute z-10 ">
                 <img src={logo}></img>
-                <form className="flex flex-col space-y-6 justify-center text-lg mt-[-40px]" onSubmit={logar}>
+                <form className="flex flex-col space-y-6 text-lg" onSubmit={logar}>
                     <input 
                         className="p-3 rounded-md text-black" 
                         type="email" 

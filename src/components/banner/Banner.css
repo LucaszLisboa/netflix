@@ -11,13 +11,6 @@
   padding-bottom: 0.3rem;
 }
 
-.banner-description {
-  width: 45rem;
-  line-height: 1.0;
-  font-size: 0.8rem;
-  max-width: 470px;
-}
-
 .banner-button {
   cursor: pointer;
   color: #fff;
